@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // add event listener that responds to when an arrow key is pressed
   document.addEventListener("keydown", function(event){
     if (event.key === "ArrowDown"){
+      console.log("ArrowDown")
       // create the list element to ADD to the movesContainer
       const downBox = document.createElement("li")
       downBox.textContent = "Down"
@@ -93,10 +94,11 @@ document.addEventListener("DOMContentLoaded", function() {
   // add event listener that responds when the Move button is clicked
   moveButton.addEventListener('click', function(event) {
     console.log("Clicked!")
-    while (movesContainer.firstElementChild) {
-      setInterval(function() { moveRobot(movesContainer); }, 1000)
-    }
+
+    setInterval(function() {moveRobot(movesContainer)}, 500)
+
   })
 
 });
+
 
